@@ -1,75 +1,79 @@
-# 🚖 RayRide – Driver App UI (Internship Project)
+# 🚖 RayRide – Driver + Commuter App UI (Internship Project)
 
-This is a Flutter-based mobile application developed as part of an internship assignment. The app simulates a driver-side interface for a ride-sharing platform named **RayRide**.
+This is a **Flutter-based mobile application** developed as part of an internship assignment. The app simulates both **Driver-side** and **Commuter-side** interfaces for the ride-sharing platform **RayRide**.
 
 ---
 
 ## 📱 Features
 
-### 1. 🧭 Dashboard UI
+### 👨‍✈️ Driver Module
+
+#### 1. 🧭 Dashboard UI
 Displays key driver metrics:
 - 🔋 Battery Percentage  
 - 🚗 Daily Kilometers Driven  
 - 💰 Earnings  
 - ⚠️ System Alerts / Warnings  
 
-### 2. 🤝 Fare Negotiation Interface
+#### 2. 🤝 Fare Negotiation Interface
 A screen to:
 - Receive fare offers from users  
 - Accept/Reject offers  
-> *Basic real-time interaction simulated using mock data.*
+> *Real-time interaction simulated using mock data.*
 
-### 3. 🗺️ Map Integration
+#### 3. 🗺️ Map Integration
 - Shows **nearest charging stations**  
-- Highlights **high-demand passenger zones** *(mocked)*  
-- Adds **driver location marker** with zoom and pan functionality  
+- Highlights **high-demand zones** *(mocked)*  
+- Displays **driver location marker** with pan/zoom  
 
-### 4. 💼 Wallet & Earnings Section
-Displays:
-- Daily / weekly earnings  
+#### 4. 💼 Wallet & Earnings Section
+- Daily/weekly earnings  
 - Withdrawable balance  
 - Transaction history  
 
-### 5. 🔔 Push Notification Simulation
-Displays push alerts for:
+#### 5. 🔔 Push Notification Simulation
+Alerts for:
 - New bookings  
-- Battery low alerts  
+- Battery low  
 - Payment updates  
 
 ---
 
-## 🧱 Folder Structure
+### 👨‍👩‍👧‍👦 Commuter Module
 
-```
-lib/
-│
-├─ dashboard_screen.dart          # Dashboard metrics
-├─ fare_offer_screen.dart         # Fare requests list
-├─ Ride_offer.dart                # Accept/Reject UI
-├─ Map_screen.dart                # Map, zones & marker
-├─ wallet_screen.dart             # Wallet & earnings UI
-├─ Notification_screen.dart       # Notifications UI
-├─ nav_bar.dart                   # Bottom navigation bar
-└─ main.dart                      # App entry point
-```
+#### 1. 🚕 Fare Suggestion & Advance Booking
+- User inputs drop location  
+- Static fare displayed (₹120 mock)  
+- Ride can be booked 5 minutes in advance  
+- Integrated with Flutter Map for user location  
+- Input validation & feedback using SnackBar
+
+#### 2. 📊 Shared Ride Dashboard
+- Shows live seat occupancy (e.g. 2/4 occupied)  
+- Rotating mock pickup/drop points (Sector, Market etc.)  
+- Real-time updates simulated with `Timer.periodic`
+
+#### 3. 🗺️ Live Ride Tracking (🔄 In Progress)
+- Map-based ride tracking with mocked driver/user locations  
+- Planned reroute logic if pickup missed  
+- (Will use `flutter_maps` + markers)
+
+#### 4. 📴 Offline Booking Logic (🔄 In Progress)
+- Allow booking even without network  
+- Store locally using `hive`  
+- Sync request when back online
+
+
+
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repo  
 ```bash
 git clone https://github.com/jainnaman0019/rayrides-work
-cd rayride-work
-```
-
-2. Get dependencies  
-```bash
+cd rayrides-work
 flutter pub get
-```
-
-3. Run on emulator or device  
-```bash
 flutter run
 ```
 
@@ -77,15 +81,31 @@ flutter run
 
 ## 📦 Dependencies
 
-This project uses core Flutter and popular packages like:
-- `google_maps_flutter`
-- `flutter_local_notifications` *(for simulating push alerts)*
-- `geolocator` *(for location services)*
-
+  cupertino_icons: ^1.0.8
+  persistent_bottom_nav_bar: ^6.2.1
+  percent_indicator: ^4.2.5
+  swipe_cards: ^2.0.0+1
+  google_fonts: ^6.2.1
+  tcard: ^1.3.5
+  geolocator: ^14.0.1
+  provider: ^6.1.5
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.1
+  shared_preferences: ^2.5.3
+  font_awesome_flutter: ^10.8.0
+  intl: ^0.20.2
+  sliding_up_panel: ^2.0.0+1
+  location: ^8.0.1
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+  connectivity_plus: ^6.0.1
+  uuid: ^4.5.1
 
 ---
 
-## 📌 Note
 
-- This app uses **mocked data** (no real backend).
-- It focuses on **UI/UX**, **navigation**, and **integration of location, alerts, and state management.**
+## 📌 Notes
+
+- All logic is mock-based (no backend/API).
+- App focuses on UI/UX, modular screen separation, and simulation of real-world ride logic.
+- Built as part of the **RayGlides MVP Internship Assignment**.
