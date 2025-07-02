@@ -81,25 +81,32 @@ flutter run
 
 ## 📦 Dependencies
 
-  cupertino_icons: ^1.0.8
-  persistent_bottom_nav_bar: ^6.2.1
-  percent_indicator: ^4.2.5
-  swipe_cards: ^2.0.0+1
-  google_fonts: ^6.2.1
-  tcard: ^1.3.5
-  geolocator: ^14.0.1
-  provider: ^6.1.5
-  flutter_map: ^6.1.0
-  latlong2: ^0.9.1
-  shared_preferences: ^2.5.3
-  font_awesome_flutter: ^10.8.0
-  intl: ^0.20.2
-  sliding_up_panel: ^2.0.0+1
-  location: ^8.0.1
-  hive_flutter: ^1.1.0
-  hive: ^2.2.3
-  connectivity_plus: ^6.0.1
-  uuid: ^4.5.1
+This Flutter project uses the following packages:
+
+- `cupertino_icons: ^1.0.8`
+- `persistent_bottom_nav_bar: ^6.2.1`
+- `percent_indicator: ^4.2.5`
+- `swipe_cards: ^2.0.0+1`
+- `google_fonts: ^6.2.1`
+- `tcard: ^1.3.5`
+- `geolocator: ^14.0.1`
+- `provider: ^6.1.5`
+- `flutter_map: ^6.1.0`
+- `latlong2: ^0.9.1`
+- `shared_preferences: ^2.5.3`
+- `font_awesome_flutter: ^10.8.0`
+- `intl: ^0.20.2`
+- `sliding_up_panel: ^2.0.0+1`
+- `location: ^8.0.1`
+- `hive_flutter: ^1.1.0`
+- `hive: ^2.2.3`
+- `connectivity_plus: ^6.0.1`
+- `uuid: ^4.5.1`
+
+To install all dependencies, run:
+
+```bash
+flutter pub get
 
 ---
 
