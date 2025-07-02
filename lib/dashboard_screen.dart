@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +104,7 @@ class DashboardScreen extends StatelessWidget {
             ),
 
             
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.25,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

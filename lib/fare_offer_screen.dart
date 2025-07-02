@@ -71,6 +71,8 @@ class fareofferscreen extends StatelessWidget {
     ),
   ];
 
+   fareofferscreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final TCardController controller = TCardController();

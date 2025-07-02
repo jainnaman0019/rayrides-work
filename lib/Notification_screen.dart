@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 
 
 class Notificationscreen extends StatefulWidget {
+  const Notificationscreen({super.key});
+
   @override
   State<Notificationscreen> createState() => _NotificationsScreenState();
 }
@@ -104,7 +106,7 @@ class _NotificationsScreenState extends State<Notificationscreen> {
 
 class SectionHeader extends StatelessWidget {
   final String title;
-  const SectionHeader({required this.title});
+  const SectionHeader({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +125,7 @@ class AnimatedNotificationCard extends StatefulWidget {
   final VoidCallback onTap;
   final VoidCallback onDismissed;
 
-  AnimatedNotificationCard({
+  const AnimatedNotificationCard({super.key, 
     required this.data,
     required this.onTap,
     required this.onDismissed,

@@ -17,7 +17,7 @@ class ChargingStation {
 }
 
 class Mapscreen extends StatefulWidget {
-  const Mapscreen({Key? key}) : super(key: key);
+  const Mapscreen({super.key});
 
   @override
   State<Mapscreen> createState() => _MapScreenState();
@@ -25,8 +25,8 @@ class Mapscreen extends StatefulWidget {
 
 class _MapScreenState extends State<Mapscreen> {
   final MapController _mapController = MapController();
-  LatLng _defaultCenter = LatLng(28.7041, 77.1025);
-  double _defaultZoom = 14.0;
+  final LatLng _defaultCenter = LatLng(28.7041, 77.1025);
+  final double _defaultZoom = 14.0;
   LatLng? _driverLocation;
   ChargingStation? selectedStation;
   bool isDarkMode = false;
@@ -204,8 +204,8 @@ class _MapScreenState extends State<Mapscreen> {
             bottom: 90,
             child: FloatingActionButton(
               heroTag: 'locate',
-              child: Icon(Icons.my_location),
               onPressed: _getCurrentLocation,
+              child: Icon(Icons.my_location),
             ),
           ),
           Positioned(

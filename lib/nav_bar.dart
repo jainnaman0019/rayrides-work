@@ -8,6 +8,8 @@ import 'package:rayride/wallet_screen.dart';
 
 
 class mainnavbar extends StatefulWidget{
+  const mainnavbar({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _MainnavbarState();

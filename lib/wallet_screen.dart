@@ -11,6 +11,8 @@ class WalletScreen extends StatelessWidget {
     {'desc': '₹85 received from Trip ID #1238', 'time': '05:10 PM'},
   ];
 
+   WalletScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
