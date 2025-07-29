@@ -1,5 +1,6 @@
 class Rideoffer{
 Rideoffer({
+  required this.rideId,
     required this.pickup,
     required this.drop,
     required this.fare,
@@ -8,6 +9,7 @@ Rideoffer({
     required this.expirytime,
   });
 
+  String rideId; // Unique identifier for the ride offer
   String pickup;
   String drop;
   double fare;
@@ -16,7 +18,8 @@ Rideoffer({
   DateTime expirytime;
 
   factory Rideoffer.fromJson(Map<String, dynamic> json){
-    return Rideoffer(pickup: json['pickup'],
+    return Rideoffer( rideId: json['rideId'] ?? '',
+      pickup: json['pickup'],
      drop: json['drop'],
       fare: json['fare'],
      distance: json['distance'],
@@ -27,6 +30,7 @@ Rideoffer({
 
   Map<String,dynamic> toJson(){
     return {
+      'rideId': rideId,
       'pickup': pickup,
       'drop': drop,
       'fare': fare,

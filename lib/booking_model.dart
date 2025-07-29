@@ -3,6 +3,7 @@ class Booking {
   final String pickup;
   final String drop;
   final double fare;
+  final String commuterId;
   final bool isSynced;
 
   Booking({
@@ -10,6 +11,7 @@ class Booking {
     required this.pickup,
     required this.drop,
     required this.fare,
+    required this.commuterId,
     required this.isSynced,
   });
 
@@ -19,6 +21,7 @@ class Booking {
       'pickup': pickup,
       'drop': drop,
       'fare': fare,
+      'commuterId': commuterId, 
       'isSynced': isSynced,
     };
   }
@@ -29,6 +32,7 @@ class Booking {
       pickup: map['pickup'],
       drop: map['drop'],
       fare: map['fare'],
+      commuterId: map['commuterId'],
       isSynced: map['isSynced'],
     );
   }
